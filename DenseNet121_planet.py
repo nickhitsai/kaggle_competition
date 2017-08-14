@@ -29,14 +29,14 @@ samples_valid_per_epoch = 256 # 32400 / (epochs*batch_size)
 samples_train_per_epoch = samples_valid_per_epoch*4
 
 num_classes = 17
-filepath = '/home/fiiser/Documents/ML/workspace/planet/train-jpg/'
+filepath = '../train-jpg/'
 
-root_path = '/home/fiiser/Documents/ML/workspace/planet/1080ti_area/dense121/5_folds_20_epoch_2/'
+root_path = '../results/dense121/5_folds_20_epoch_2/'
 
 callbackpath =  root_path + 'DenseNet_{val_loss:.4f}-{val_binary_accuracy:.4f}-{val_recall:.4f}.hdf5'
 high_recall_callbackpath =  root_path + 'DenseNet_recall_{val_loss:.4f}-{val_binary_accuracy:.4f}-{val_recall:.4f}.hdf5'
 
-csv_filepath = '/home/fiiser/Documents/ML/workspace/planet/train_v2.csv'
+csv_filepath = '../train_v2.csv'
 logger_filepath = root_path + 'DenseNet_log.csv'
 image_size = 224
 
