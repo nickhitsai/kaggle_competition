@@ -18,7 +18,7 @@ DenseNet121 | 0.925
 In all files, all include a learning rate scheduler function for tuning learning rate.
 It just based on my experiments.
 
-I tune it from auto decrease callback([ReduceLROnPlateau](https://keras.io/callbacks/)].
+I tune it from auto decrease callback([ReduceLROnPlateau](https://keras.io/callbacks/)).
 I run the traning process about 40 epoch at the begining. I figure out that is too much for this competition.
 After the first model, I just do this about 20 epoch.
 
@@ -42,3 +42,21 @@ In this competition, it is scored by f2 score. I have also experimented the cust
 Briefly, It's suck.
 I have tried all kinds af combination, such as BinaryLoss + a\*F2Score(a locate in 0~1) and just F2Score.
 All results are worse than BinaryLoss.
+
+
+# After training
+I do not upload these files because these files is too specific to this competition and really messy.
+
+I just elaborate what I have done.
+
+## Tune the threshold base on every model
+Everytime I train a model, the prediction are all probabilistics. I search every labels from 0.00 to 99.99 that can achieve the best F2 scores.
+
+This would help to achieve better score on leaderboard.
+
+## Voting ensemble
+I use top 5 model to generate the last submission.
+
+
+# End
+Hoping that it would be help to someone that just start to learn deep learning and to compete on kaggle.
